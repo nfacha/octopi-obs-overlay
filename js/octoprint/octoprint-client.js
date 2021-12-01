@@ -12,6 +12,11 @@ async function getCurrentJob() {
     return JSON.parse(data);
 }
 
+async function getPrinterState() {
+    var data = await octGet('printer');
+    return JSON.parse(data);
+}
+
 //helpers
 async function octGet(path) {
     var response = await fetch(SERVER_URL + '/' + path, {
