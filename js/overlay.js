@@ -10,15 +10,20 @@ $().ready(async function () {
 
 async function updateOverlay() {
     //get job information
-    const data = await getCurrentJob();
-    const estimatedPrintTime = data.job.estimatedPrintTime;
-    const filamentLenghtUsed = data.job.filament.tool0.length;
-    const fileName = data.job.file.display;
-    const completionPercent = data.progress.completion;
-    const printTimeLeft = data.progress.printTimeLeft;
-    const printTime = data.progress.printTime;
-    const printState = data.state
+    const jobInfo = await getCurrentJob();
+    const estimatedPrintTime = jobInfo.job.estimatedPrintTime;
+    const filamentLenghtUsed = jobInfo.job.filament.tool0.length;
+    const fileName = jobInfo.job.file.display;
+    const completionPercent = jobInfo.progress.completion;
+    const printTimeLeft = jobInfo.progress.printTimeLeft;
+    const printTime = jobInfo.progress.printTime;
+    const printState = jobInfo.state
 
     //get printer information
+    const printerInfo = await getPrinterState();
+    const bedTarget = printerInfo.temperature.bed.target;
+    const bedActual = printerInfo.temperature.bed.actual;
+    const tool0Target = printerInfo.temperature.tool0.target;
+    const tool0Actual = printerInfo.temperature.tool0.actual;
 
 }
