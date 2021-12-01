@@ -1,5 +1,8 @@
-.job-information-card {
-  background-color: red;
+.job-information-card .progress {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 30%;
+  margin-left: 30%;
 }
 
 /*# sourceMappingURL=style.css.map */

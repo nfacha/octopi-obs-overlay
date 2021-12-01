@@ -1,5 +1,5 @@
-const SERVER_URL = 'http://10.0.2.19/api';
-const API_KEY = '62F7E41742A04F91B01112DC0E565E02';
+let SERVER_URL = 'http://10.0.2.19/api';
+let API_KEY = '';
 
 //Octopi API
 async function getVersion() {
