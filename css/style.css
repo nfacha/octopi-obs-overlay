@@ -1,9 +1,9 @@
-.job-information-card {
+body {
   background-color: black;
   color: white;
 }
 
-.job-information-card .progress {
+body .progress {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 30%;
